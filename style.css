@@ -1,0 +1,11 @@
+/* This is the CSS file that defines the style of my personal webpage */
+
+/* Change the background color of the entire page */
+body {
+  background-color: #C0AECF;
+}
+
+/* Change the background color of all heading 1 elements */
+h1 {
+  background-color: white;
+}
