@@ -18,7 +18,8 @@
       <li id="name">Jamie Duncan</li>
       <li><a href="#about">About Me</a></li>
       <li><a href="#education">Education</a></li>
-      <li><a href="#work">Work Experience</a></li>
+      <li><a href="#work">WorkExperience</a></li>
+      <li><a href="#publications">Selected Publications</a></li>
       <li><a href="#personal">Personal Interests</a></li>
       <li><a href="#connect">Let's Connect!</a></li>
       <!-- This will be a button eventually -->
@@ -34,19 +35,22 @@
         <h3>George Mason University</h3>
 
         <!-- Horizontal arrangement of icon links -->
+        <div id="first-row-icons">
         <ul class="horizontal-icons">
           <!-- Email Link -->
-          <li class="horizontal-icons"><a href="mailto:jamieduncan1212@gmail.com"><i class="fa fa-envelope"></i></a></li>
+          <li><a href="mailto:jamieduncan1212@gmail.com"><i class="fa fa-envelope"></i></a></li>
           <!-- LinkedIn Link -->
-          <li class="horizontal-icons"><a href="https://www.linkedin.com/in/jamie-r-duncan" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/jamie-r-duncan" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
           <!-- Google Scholar Link -->
-          <li class="horizontal-icons"><a href="https://scholar.google.com/citations?user=example" target="_blank"><i class="fa-brands fa-google-scholar"></i></a></li>
+          <li><a href="https://scholar.google.com/citations?user=example" target="_blank"><i class="fa-brands fa-google-scholar"></i></a></li>
           <!-- GitHub Link -->
-          <li class="horizontal-icons"><a href="https://github.com/jamieduncan1212" target="_blank"><i class="fa fa-github"></i></a></li>
+          <li><a href="https://github.com/jamieduncan1212" target="_blank"><i class="fa fa-github"></i></a></li>
           <!-- CV Link -->
-          <li class="horizontal-icons"><a href="Jamie_Duncan_CV.pdf" target="_blank"><i class="fa-solid fa-file"></i></a></li>
+          <li><a href="Jamie_Duncan_CV.pdf" target="_blank"><i class="fa-solid fa-file"></i></a></li>
         </ul>
       </div>
+      </div>
+      
       <div class="right-column">
         <h1 id="about">About Me</h1>
         <p>I'm a Human Factors & Applied Cognition Ph.D. student at George Mason University. Under the guidance of Dr. Yi-Ching Lee I'm conducting research on automated driving and transportation safety. My previous research experience includes usability testing within both the technology and public health domains, as well as explainable AI (XAI) for automated vehicles. As both a developer and user of technology, I understand the importance of research that supports strong product design. I'm excited to add to this body of research, influencing safe and supportive design for all.</p>
@@ -55,33 +59,59 @@
           <li><i class="fa-solid fa-car-side" aria-hidden="true"></i> Automated Driving</li>
           <li><i class="fa-solid fa-car" aria-hidden="true"></i> Teen Driving</li>
           <li><i class="fa-solid fa-car-side" aria-hidden="true"></i> Explainable AI (XAI) for Automated Vehicles</li>
-        </ul>  
+        </ul> 
+        
+        <h2 id="education">Education</h2>
+        <ul class="icon-list">
+          <li><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>PhD in Human Factors & Applied Cognition, Currently Enrolled (George Mason University)</li>
+          <li><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>BA in Computer Science and Psychology, 2025 (Hamilton College)</li>
+        </ul>
       </div>
     </div>
 
-    <h2 id="education">Education</h2>
-    <ul class="icon-list">
-      <li><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>PhD in Human Factors & Applied Cognition, Currently Enrolled (George Mason University)</li>
-      <li><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>BA in Computer Science and Psychology, 2025 (Hamilton College)</li>
-    </ul>
-
     <h2 id="work">Work Experience</h2>
 
+    <h2 id="publications">Selected Publications</h2>
+
     <h2 id="personal">Personal Interests</h2>
+    <!-- Code for slideshow of personal interest pictures -->
+    <div class="slideshow">
+      <div class="numbertext">1 / 2</div>
+      <img src="pilotMountain.jpeg" alt="View from the top of Pilot Mountain, NC" style="width:100%">
+      <div class="text">Caption Text</div>
+
+      <div class="numbertext">2 / 2</div>
+      <img src="GWSateForest.jpeg" alt="ADD ALT TEXT" style="width:100%">
+      <div class="text">Caption Two</div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <!-- Code for small dots beneath the slideshow -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+
+    <p>In my freetime, I enjoy hiking, running, reading, cooking, and crafting (especially crochet). See the slideshow above for some of my recent out-of-office adventures!</p>
 
     <h2 id="connect">Let's Connect!</h2>
     <!-- Horizontal arrangement of icon links -->
     <ul class="horizontal-icons">
       <!-- Email Link -->
-      <li class="horizontal-icons"><a href="mailto:jamieduncan1212@gmail.com"><i class="fa fa-envelope"></i></a></li>
+      <li><a href="mailto:jamieduncan1212@gmail.com"><i class="fa fa-envelope"></i></a></li>
       <!-- LinkedIn Link -->
-      <li class="horizontal-icons"><a href="https://www.linkedin.com/in/jamie-r-duncan" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/jamie-r-duncan" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
       <!-- Google Scholar Link -->
-      <li class="horizontal-icons"><a href="https://scholar.google.com/citations?user=example" target="_blank"><i class="fa-brands fa-google-scholar"></i></a></li>
+      <li><a href="https://scholar.google.com/citations?user=example" target="_blank"><i class="fa-brands fa-google-scholar"></i></a></li>
       <!-- GitHub Link -->
-      <li class="horizontal-icons"><a href="https://github.com/jamieduncan1212" target="_blank"><i class="fa fa-github"></i></a></li>
+      <li><a href="https://github.com/jamieduncan1212" target="_blank"><i class="fa fa-github"></i></a></li>
       <!-- CV Link -->
-      <li class="horizontal-icons"><a href="Jamie_Duncan_CV.pdf" target="_blank"><i class="fa-solid fa-file"></i></a></li>
+      <li><a href="Jamie_Duncan_CV.pdf" target="_blank"><i class="fa-solid fa-file"></i></a></li>
     </ul>
   </main>
 </body>
