@@ -1,13 +1,18 @@
 /* This is the CSS file that defines the style of my personal webpage */
 
-/* Change the background color of the entire page */
+/* General styling for the body of the webpage */
+.two-column-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+}
+
+/* General styling for links, text and background colors */
 body {
   background-color: #C0AECF;
   margin: 0;
   padding: 0;
 }
-
-/* General styling for links, text and background colors */
 
 /* UPDATE ALL OF THESE COLORS AS WE STYLE THE PAGE */
 a {
@@ -78,6 +83,14 @@ a:active {
   cursor: default;
 }
 
+.headshot {
+  width: min(300px, 60vw);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 5px solid #6F1BA6;
+}
+
 /* Styling for horizontal icon section */
 .horizontal-icons ul{
   list-style-type: none;
@@ -93,6 +106,7 @@ a:active {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-size: 1.5em;
 }
 
 /* Styling for lists with icons as bullet points */
@@ -115,6 +129,7 @@ a:active {
 
 /* Styling the footer section of the webpage */
 footer {
+  clear: both;
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
