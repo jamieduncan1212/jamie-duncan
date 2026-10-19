@@ -73,47 +73,78 @@
 
     <h2 id="publications">Selected Publications</h2>
 
-    <h2 id="personal">Personal Interests</h2>
+    <h2 id="personal" class="center-text">Personal Interests</h2>
+
     <!-- Code for slideshow of personal interest pictures -->
     <div class="slideshow">
-      <div class="numbertext">1 / 2</div>
-      <img src="pilotMountain.jpeg" alt="View from the top of Pilot Mountain, NC" style="width:100%">
-      <div class="text">Caption Text</div>
+      <div class = "mySlides fade">
+      <img src="pilotMountain.jpeg" alt="View from the top of Pilot Mountain, NC">
+      <div class="text">View from the top of Pilot Mountain, NC</div>
+    </div>
 
-      <div class="numbertext">2 / 2</div>
-      <img src="GWSateForest.jpeg" alt="ADD ALT TEXT" style="width:100%">
-      <div class="text">Caption Two</div>
+    <div class = "mySlides fade">
+      <img src="GWStateForest.jpeg" alt="Buzzard Rocks in George Washington State Forest, VA">
+      <div class="text">Buzzard Rocks in George Washington State Forest, VA</div>
+    </div>
+
+     <div class = "mySlides fade">
+      <img src="whiteOakWaterfall.jpeg" alt="Waterfall in White Oak Canyon, VA">
+      <div class="text">Waterfall in White Oak Canyon, VA</div>
+    </div>
 
       <!-- Next and previous buttons -->
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
     </div>
-    <br>
 
-    <!-- Code for small dots beneath the slideshow -->
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
+    <p class="center-text">In my freetime, I enjoy hiking, running, reading, cooking, and crafting (especially crochet). See the slideshow above for some of my recent out-of-office adventures!</p>
+
+    <h2 id="connect" class="center-text">Let's Connect!</h2>
+
+    <!-- Two column layout for the "Let's Connect!" section of the webpage -->
+    <div class="two-column-layout">
+      <div class="left-column">
+        <!-- Vertical arrangement of icon links -->
+        <ul class="vertical-icons">
+          <!-- Email Link -->
+           <li><a class="icon-link" href="mailto:jamieduncan1212@gmail.com"><i class="fa fa-envelope"></i></a><p>Email me at <a href="mailto:jamieduncan1212@gmail.com">jamieduncan1212@gmail.com</a></p></li>
+           <!-- LinkedIn Link -->
+           <li><a class="icon-link" href="https://www.linkedin.com/in/jamie-r-duncan" target="_blank"><i class="fa-brands fa-linkedin"></i></a><p>Connect with me on <a href="https://www.linkedin.com/in/jamie-r-duncan" target="_blank">LinkedIn</a></p></li>
+           <!-- Google Scholar Link -->
+           <li><a class="icon-link" href="https://scholar.google.com/citations?user=example" target="_blank"><i class="fa-brands fa-google-scholar"></i></a><p>See all my publications on <a href="https://scholar.google.com/citations?user=example" target="_blank">Google Scholar</a></p></li>
+           <!-- GitHub Link -->
+           <li><a class="icon-link" href="https://github.com/jamieduncan1212" target="_blank"><i class="fa fa-github"></i></a><p>See coding examples on <a href="https://github.com/jamieduncan1212" target="_blank">GitHub</a></p></li>
+           <!-- CV Link -->
+           <li><a class="icon-link" href="Jamie_Duncan_CV.pdf" target="_blank"><i class="fa-solid fa-file"></i></a><p>View an updated version of my <a href="Jamie_Duncan_CV.pdf" target="_blank">CV</a></p></li>
+         </ul>
+      </div>
+      <div class="right-column">
+        <!-- ADD SOMETHING HERE -->
+      </div>
     </div>
-
-    <p>In my freetime, I enjoy hiking, running, reading, cooking, and crafting (especially crochet). See the slideshow above for some of my recent out-of-office adventures!</p>
-
-    <h2 id="connect">Let's Connect!</h2>
-    <!-- Horizontal arrangement of icon links -->
-    <ul class="horizontal-icons">
-      <!-- Email Link -->
-      <li><a href="mailto:jamieduncan1212@gmail.com"><i class="fa fa-envelope"></i></a></li>
-      <!-- LinkedIn Link -->
-      <li><a href="https://www.linkedin.com/in/jamie-r-duncan" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-      <!-- Google Scholar Link -->
-      <li><a href="https://scholar.google.com/citations?user=example" target="_blank"><i class="fa-brands fa-google-scholar"></i></a></li>
-      <!-- GitHub Link -->
-      <li><a href="https://github.com/jamieduncan1212" target="_blank"><i class="fa fa-github"></i></a></li>
-      <!-- CV Link -->
-      <li><a href="Jamie_Duncan_CV.pdf" target="_blank"><i class="fa-solid fa-file"></i></a></li>
-    </ul>
   </main>
+
+  <!-- Javascript code for slideshow functionality -->
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(step) {
+      showSlides(slideIndex += step);
+    }
+
+    function showSlides(index) {
+      const slides = document.getElementsByClassName("mySlides");
+      if (index > slides.length) slideIndex = 1;
+      if (index < 1) slideIndex = slides.length;
+      for (const slide of slides) {
+        slide.style.display = "none";
+      }
+      slides[slideIndex - 1].style.display = "block";
+    }
+  </script>
+
 </body>
 
 <footer>
