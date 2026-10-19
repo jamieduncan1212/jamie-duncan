@@ -7,6 +7,19 @@
   width: 100%;
 }
 
+.profile-layout {
+  align-items: stretch;
+}
+
+.profile-layout .left-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-content {
+  margin-block: auto;
+}
+
 .left-column {
   padding: 1rem;
   text-align: center;
@@ -26,23 +39,38 @@
 }
 
 /* General styling for links, text and background colors */
-body {
+.light-theme {
+  color: #3A1A3A;
   background-color: #C0AECF;
-  margin: 0;
-  padding: 0;
 }
 
-/* UPDATE ALL OF THESE COLORS AS WE STYLE THE PAGE */
-a {
-  color: #000000;
+.dark-theme {
+  background-color: black;
+  color: #C0AECF;
 }
 
-a:visited {
-  color: #000000;
+.light-theme a {
+  color: #3A1A3A;
 }
 
-a:active {
-  color: #000000;
+.light-theme a:visited {
+  color: #3A1A3A;
+}
+
+.light-theme a:active {
+  color: #3A1A3A;
+}
+
+.dark-theme a {
+  color: #C0AECF;
+}
+
+.dark-theme a:visited {
+  color: #C0AECF;
+}
+
+.dark-theme a:active {
+  color: #C0AECF;
 }
 
 /* Styling changes that create the navigation bar */
@@ -56,37 +84,60 @@ a:active {
   margin: 0;
   padding: 0;
   overflow: hidden;
+}
+
+.light-theme .navbar {
   background-color: #6F1BA6;
+}
+
+.dark-theme .navbar {
+  background-color: #C0AECF;
 }
 
 .navbar li {
   list-style-type: none;
   display: flex;
   align-items: center;
-  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-size: 1.25em;
+}
+
+.light-theme .navbar li {
   background-color: #6F1BA6;
   color: #C0AECF;
-  font-size: 1.25em;
+}
+
+.dark-theme .navbar li {
+  background-color: #C0AECF;
+  color: #6F1BA6;
 }
 
 .navbar li:last-child {
   margin-left: auto;
 }
 
-.navbar a {
+.light-theme .navbar a {
   color: #C0AECF;
   text-decoration: none;
 }
 
-.navbar li:hover {
-  background-color: #C0AECF;
+.dark-theme .navbar a {
+  color: #6F1BA6;
+  text-decoration: none;
 }
 
-.navbar li:hover, .navbar li:hover a {
+.light-theme .navbar li:hover,
+.light-theme .navbar li:hover a {
+  background-color: #C0AECF;
   color: #6F1BA6;
+}
+
+.dark-theme .navbar li:hover,
+.dark-theme .navbar li:hover a {
+  background-color: #6F1BA6;
+  color: #C0AECF;
 }
 
 #name {
@@ -94,18 +145,74 @@ a:active {
   font-size: 1.5em;
 }
 
-#name:hover {
+.light-theme #name:hover {
   background-color: #6F1BA6;
   color: #C0AECF;
   cursor: default;
 }
 
-.headshot {
+.dark-theme #name:hover {
+  background-color: #C0AECF;
+  color: #6F1BA6;
+  cursor: default;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar li:has(> #switch) {
+  padding: 0;
+}
+
+#switch {
+  align-self: stretch;
+  padding: 0 16px;
+  font-size: 1.25em;
+}
+
+.light-theme #switch .fa-sun,
+.dark-theme #switch .fa-moon {
+  display: none;
+}
+
+.light-theme button {
+  background-color: #6F1BA6;
+  color: #C0AECF;
+}
+
+.dark-theme button {
+  background-color: #C0AECF;
+  color: #6F1BA6;
+}
+
+
+.light-theme button:hover {
+  background-color: #C0AECF;
+  color: #6F1BA6;
+}
+
+.dark-theme button:hover {
+  background-color: #6F1BA6;
+  color: #C0AECF;
+}
+
+.headshot{
   width: min(300px, 60vw);
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 12px;
+}
+
+.light-theme .headshot {
   border: 5px solid #6F1BA6;
+}
+
+.dark-theme .headshot {
+  border: 5px solid #C0AECF;
 }
 
 /* Styling for horizontal icon section */
@@ -124,7 +231,7 @@ a:active {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 /* Styling for the vertical icon section */
@@ -183,13 +290,24 @@ footer {
 
 /* Styling for the personal interest slideshow */
 .slideshow {
+  width: min(90vw, 1000px);
   max-width: 1000px;
+  box-sizing: border-box;
   position: relative;
   margin: auto;
 }
 
+.light-theme .slideshow {
+  border: 5px solid #6F1BA6;
+}
+
+.dark-theme .slideshow {
+  border: 5px solid #C0AECF;
+}
+
 .slideshow img {
-  width: 90vw;
+  display: block;
+  width: 100%;
   max-width: 100%;
   height: 45vw;
   max-height: 500px;
@@ -202,7 +320,7 @@ footer {
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.slideshow a.prev, .slideshow a.next {
   cursor: pointer;
   position: absolute;
   top: 50%;

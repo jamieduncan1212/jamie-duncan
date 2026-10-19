@@ -5,55 +5,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- Including Font Awesome for icons -->
   <script src="https://kit.fontawesome.com/83ae0e9dca.js" crossorigin="anonymous"></script>
+
+  <!-- Linking my stylesheet -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Linking my JavaScript file -->
+  <script src="script.js"></script>
+
   <title>Jamie Duncan</title>
 </head>
 
-<body>
+<body class="light-theme">
   <main>
     <!-- Code for the navigation bar -->
     <ul class="navbar">
       <li id="name">Jamie Duncan</li>
       <li><a href="#about">About Me</a></li>
       <li><a href="#education">Education</a></li>
-      <li><a href="#work">WorkExperience</a></li>
+      <li><a href="#work">Work Experience</a></li>
       <li><a href="#publications">Selected Publications</a></li>
       <li><a href="#personal">Personal Interests</a></li>
       <li><a href="#connect">Let's Connect!</a></li>
-      <!-- This will be a button eventually -->
-      <li><i class="fa-solid fa-moon"></i></li>
+      <!-- Button that toggles between light and dark mode -->
+      <li><button type="button" id="switch"><i class="fa-solid fa-moon" aria-hidden="true"></i><i class="fa-solid fa-sun" aria-hidden="true"></i></button></li>
     </ul>
 
     <!-- Two column layout for the top section of the webpage -->
-    <div class="two-column-layout">
+    <div class="two-column-layout profile-layout">
       <div class="left-column">
-        <img class="headshot" src="headshot.png" alt="Headshot of Jamie Duncan">
-        <h1>Jamie Duncan, BA</h1>
-        <h2>Human Factors & Applied Cognition PhD Student</h2>
-        <h3>George Mason University</h3>
+        <div class="profile-content">
+          <img class="headshot" src="headshot.png" alt="Headshot of Jamie Duncan">
+          <h1>Jamie Duncan, BA</h1>
+          <h2>Human Factors & Applied Cognition PhD Student</h2>
+          <h3>George Mason University</h3>
 
-        <!-- Horizontal arrangement of icon links -->
-        <div id="first-row-icons">
-        <ul class="horizontal-icons">
-          <!-- Email Link -->
-          <li><a href="mailto:jamieduncan1212@gmail.com"><i class="fa fa-envelope"></i></a></li>
-          <!-- LinkedIn Link -->
-          <li><a href="https://www.linkedin.com/in/jamie-r-duncan" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-          <!-- Google Scholar Link -->
-          <li><a href="https://scholar.google.com/citations?user=example" target="_blank"><i class="fa-brands fa-google-scholar"></i></a></li>
-          <!-- GitHub Link -->
-          <li><a href="https://github.com/jamieduncan1212" target="_blank"><i class="fa fa-github"></i></a></li>
-          <!-- CV Link -->
-          <li><a href="Jamie_Duncan_CV.pdf" target="_blank"><i class="fa-solid fa-file"></i></a></li>
-        </ul>
-      </div>
+          <!-- Horizontal arrangement of icon links -->
+          <div id="first-row-icons">
+            <ul class="horizontal-icons">
+              <!-- Email Link -->
+              <li><a href="mailto:jamieduncan1212@gmail.com"><i class="fa fa-envelope"></i></a></li>
+              <!-- LinkedIn Link -->
+              <li><a href="https://www.linkedin.com/in/jamie-r-duncan" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+              <!-- Google Scholar Link -->
+              <li><a href="https://scholar.google.com/citations?user=example" target="_blank"><i class="fa-brands fa-google-scholar"></i></a></li>
+              <!-- GitHub Link -->
+              <li><a href="https://github.com/jamieduncan1212" target="_blank"><i class="fa fa-github"></i></a></li>
+              <!-- CV Link -->
+              <li><a href="Jamie_Duncan_CV.pdf" target="_blank"><i class="fa-solid fa-file"></i></a></li>
+            </ul>
+          </div>
+        </div>
       </div>
       
       <div class="right-column">
         <h1 id="about">About Me</h1>
-        <p>I'm a Human Factors & Applied Cognition Ph.D. student at George Mason University. Under the guidance of Dr. Yi-Ching Lee I'm conducting research on automated driving and transportation safety. My previous research experience includes usability testing within both the technology and public health domains, as well as explainable AI (XAI) for automated vehicles. As both a developer and user of technology, I understand the importance of research that supports strong product design. I'm excited to add to this body of research, influencing safe and supportive design for all.</p>
+        <p>I'm a first-year Human Factors & Applied Cognition Ph.D. student at George Mason University. Under the guidance of Dr. Yi-Ching Lee I'm conducting research on automated driving and transportation safety. My previous research experience includes usability testing within both the technology and public health domains, as well as explainable AI (XAI) for automated vehicles. As both a developer and user of technology, I understand the importance of research that supports strong product design. I'm excited to add to this body of research, influencing safe and supportive design for all.</p>
         <p>My research interests include:</p>
         <ul class="icon-list">
           <li><i class="fa-solid fa-car-side" aria-hidden="true"></i> Automated Driving</li>
@@ -69,9 +78,9 @@
       </div>
     </div>
 
-    <h2 id="work">Work Experience</h2>
+    <h2 id="work" class="center-text">Work Experience</h2>
 
-    <h2 id="publications">Selected Publications</h2>
+    <h2 id="publications" class="center-text">Selected Publications</h2>
 
     <h2 id="personal" class="center-text">Personal Interests</h2>
 
@@ -112,7 +121,7 @@
            <!-- LinkedIn Link -->
            <li><a class="icon-link" href="https://www.linkedin.com/in/jamie-r-duncan" target="_blank"><i class="fa-brands fa-linkedin"></i></a><p>Connect with me on <a href="https://www.linkedin.com/in/jamie-r-duncan" target="_blank">LinkedIn</a></p></li>
            <!-- Google Scholar Link -->
-           <li><a class="icon-link" href="https://scholar.google.com/citations?user=example" target="_blank"><i class="fa-brands fa-google-scholar"></i></a><p>See all my publications on <a href="https://scholar.google.com/citations?user=example" target="_blank">Google Scholar</a></p></li>
+           <li><a class="icon-link" href="https://scholar.google.com/citations?user=example" target="_blank"><i class="fa-brands fa-google-scholar"></i></a><p>See my publications on <a href="https://scholar.google.com/citations?user=example" target="_blank">Google Scholar</a></p></li>
            <!-- GitHub Link -->
            <li><a class="icon-link" href="https://github.com/jamieduncan1212" target="_blank"><i class="fa fa-github"></i></a><p>See coding examples on <a href="https://github.com/jamieduncan1212" target="_blank">GitHub</a></p></li>
            <!-- CV Link -->
@@ -124,26 +133,6 @@
       </div>
     </div>
   </main>
-
-  <!-- Javascript code for slideshow functionality -->
-  <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(step) {
-      showSlides(slideIndex += step);
-    }
-
-    function showSlides(index) {
-      const slides = document.getElementsByClassName("mySlides");
-      if (index > slides.length) slideIndex = 1;
-      if (index < 1) slideIndex = slides.length;
-      for (const slide of slides) {
-        slide.style.display = "none";
-      }
-      slides[slideIndex - 1].style.display = "block";
-    }
-  </script>
 
 </body>
 
