@@ -49,6 +49,40 @@
   text-align: center;
 }
 
+.align-left {
+  text-align: left;
+  margin: 0.5rem;
+  min-width: 0;
+}
+
+.align-left .icon-list li {
+  display: grid;
+  grid-template-columns: 1.25rem minmax(0, 1fr);
+  align-items: start;
+  gap: 0.5rem;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.experience-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 1rem;
+}
+
+.experience-layout .slideshow {
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .experience-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
 p, li, h4{
   font-size: 14pt;
 }
@@ -59,37 +93,37 @@ h3 {
 
 /* General styling for links, text and background colors */
 .light-theme {
-  color: #3A1A3A;
-  background-color: #C0AECF;
+  color: #2E292E;
+  background-color: #FFFEF0;
 }
 
 .dark-theme {
   background-color: black;
-  color: #C0AECF;
+  color: #FFFEF0;
 }
 
 .light-theme a {
-  color: #3A1A3A;
+  color: #2E292E;
 }
 
 .light-theme a:visited {
-  color: #3A1A3A;
+  color: #2E292E;
 }
 
 .light-theme a:active {
-  color: #3A1A3A;
+  color: #2E292E;
 }
 
 .dark-theme a {
-  color: #C0AECF;
+  color: #FFFEF0;
 }
 
 .dark-theme a:visited {
-  color: #C0AECF;
+  color: #FFFEF0;
 }
 
 .dark-theme a:active {
-  color: #C0AECF;
+  color: #FFFEF0;
 }
 
 /* Styling changes that create the navigation bar */
@@ -106,11 +140,11 @@ h3 {
 }
 
 .light-theme .navbar {
-  background-color: #6F1BA6;
+  background-color: #85287C;
 }
 
 .dark-theme .navbar {
-  background-color: #C0AECF;
+  background-color: #FFFEF0;
 }
 
 .navbar li {
@@ -124,13 +158,13 @@ h3 {
 }
 
 .light-theme .navbar li {
-  background-color: #6F1BA6;
-  color: #C0AECF;
+  background-color: #85287C;
+  color: #FFFEF0;
 }
 
 .dark-theme .navbar li {
-  background-color: #C0AECF;
-  color: #6F1BA6;
+  background-color: #FFFEF0;
+  color: #85287C;
 }
 
 .navbar li:last-child {
@@ -138,25 +172,25 @@ h3 {
 }
 
 .light-theme .navbar a {
-  color: #C0AECF;
+  color: #FFFEF0;
   text-decoration: none;
 }
 
 .dark-theme .navbar a {
-  color: #6F1BA6;
+  color: #85287C;
   text-decoration: none;
 }
 
 .light-theme .navbar li:hover,
 .light-theme .navbar li:hover a {
-  background-color: #C0AECF;
-  color: #6F1BA6;
+  background-color: #FFFEF0;
+  color: #85287C;
 }
 
 .dark-theme .navbar li:hover,
 .dark-theme .navbar li:hover a {
-  background-color: #6F1BA6;
-  color: #C0AECF;
+  background-color: #85287C;
+  color: #FFFEF0;
 }
 
 #name {
@@ -165,14 +199,14 @@ h3 {
 }
 
 .light-theme #name:hover {
-  background-color: #6F1BA6;
-  color: #C0AECF;
+  background-color: #85287C;
+  color: #FFFEF0;
   cursor: default;
 }
 
 .dark-theme #name:hover {
-  background-color: #C0AECF;
-  color: #6F1BA6;
+  background-color: #FFFEF0;
+  color: #85287C;
   cursor: default;
 }
 
@@ -199,24 +233,24 @@ button {
 }
 
 .light-theme button {
-  background-color: #6F1BA6;
-  color: #C0AECF;
+  background-color: #85287C;
+  color: #FFFEF0;
 }
 
 .dark-theme button {
-  background-color: #C0AECF;
-  color: #6F1BA6;
+  background-color: #FFFEF0;
+  color: #85287C;
 }
 
 
 .light-theme button:hover {
-  background-color: #C0AECF;
-  color: #6F1BA6;
+  background-color: #FFFEF0;
+  color: #85287C;
 }
 
 .dark-theme button:hover {
-  background-color: #6F1BA6;
-  color: #C0AECF;
+  background-color: #85287C;
+  color: #FFFEF0;
 }
 
 .headshot{
@@ -227,11 +261,11 @@ button {
 }
 
 .light-theme .headshot {
-  border: 5px solid #6F1BA6;
+  border: 5px solid #85287C;
 }
 
 .dark-theme .headshot {
-  border: 5px solid #C0AECF;
+  border: 5px solid #FFFEF0;
 }
 
 /* Styling for horizontal icon section */
@@ -314,14 +348,15 @@ footer {
   box-sizing: border-box;
   position: relative;
   margin: auto;
+  background-color: #FFFFFF;
 }
 
 .light-theme .slideshow {
-  border: 5px solid #6F1BA6;
+  border: 5px solid #85287C;
 }
 
 .dark-theme .slideshow {
-  border: 5px solid #C0AECF;
+  border: 5px solid #FFFEF0;
 }
 
 .slideshow img {
@@ -331,6 +366,12 @@ footer {
   height: 45vw;
   max-height: 500px;
   object-fit: cover;
+}
+
+.slideshow[data-slideshow="act"] img {
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
 }
 
 /* Hide the images by default */
@@ -354,7 +395,21 @@ footer {
   user-select: none;
 }
 
+.slideshow[data-slideshow="act"] a.prev,
+.slideshow[data-slideshow="act"] a.next {
+  color: #85287C;
+}
+
+.slideshow[data-slideshow="act"] a.prev:hover,
+.slideshow[data-slideshow="act"] a.next:hover {
+  color: #FFFFFF;
+}
+
 /* Position the "next button" to the right */
+.prev {
+  left: 0;
+}
+
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;

@@ -25,8 +25,8 @@
       <li id="name">Jamie Duncan</li>
       <li><a href="#about">About Me</a></li>
       <li><a href="#education">Education</a></li>
-      <li><a href="#work">Work Experience</a></li>
-      <li><a href="#publications">Selected Publications</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#work">Experience</a></li>
       <li><a href="#personal">Personal Interests</a></li>
       <li><a href="#connect">Let's Connect!</a></li>
       <!-- Button that toggles between light and dark mode -->
@@ -78,14 +78,78 @@
       </div>
     </div>
 
-    <h2 id="work" class="center-text">Work Experience</h2>
+    <h2 id="publications" class="center-text">Publications</h2>
+    <p>Garcia, K. R., <b>Duncan, J.</b>, & Chen, J. (2025). User-Centered Explainable Artificial Intelligence in Partially Automated Vehicles. Proceedings of the Human Factors and Ergonomics Society Annual Meeting.</p>
 
-    <h2 id="publications" class="center-text">Selected Publications</h2>
+    <h2 id="work" class="center-text">Experience</h2>
+    <div class="experience-layout">
+    <h3>Graduate Research Assistant - George Mason University (Fairfax, VA)</h3>
+    <p>August 2026 - Present</p>
 
+    <h3>Graduate Teaching Assistant - George Mason University (Fairfax, VA)</h3>
+    <p>August 2026 - Present</p>
+
+    <div class = "align-left">
+    <h3>Social/Clinical Research Assistant - UNC Chapel Hill (Chapel Hill, NC)</h3>
+    <p>September 2025 - August 2026</p>
+    <ul class="icon-list">
+      <li><i class="fa-solid fa-angle-right"></i>Improved participant recruitment across three different studies by identifying new participant outreach methods; designed engaging activities to get children and their families interested in scientific research</li>
+      <li><i class="fa-solid fa-angle-right"></i>Facilitated protocol testing the feasibility of using sensor technology in research with young children</li>
+      <li><i class="fa-solid fa-angle-right"></i>Enabled a nutrition tracking pilot study by designing and building an automated calorie tracking application. See application photos on the right. All data displayed is my own and was gathered for application testing, it was not part of the study.</li>
+    </ul>
+    </div>
+    <!-- Code for slideshow of ACT interface -->
+    <div class="slideshow align-right" data-slideshow="act">
+      <div class = "mySlides fade">
+      <img src="ViewStudies.png" alt="View of all studies in the interface. Displays when you open the application.">
+      <div class="text">View of all studies in the interface. Displays when you open the application.</div>
+    </div>
+
+    <div class = "mySlides fade">
+      <img src="Add User.png" alt="View of adding a new user to the interface using their phone number. ">
+      <div class="text">Adding a new user to the interface based on their phone number. Once their number is added, they are sent registration information with the Fitbit API via text. This pop-up displayes when the "Add User" button is clicked.</div>
+    </div>
+
+     <div class = "mySlides fade">
+      <img src="Study Information.png" alt="View of study information page in the interface.">
+      <div class="text">View of study information page in the interface. This information appears when an individual study is selected from the main menu.</div>
+    </div>
+
+    <div class = "mySlides fade">
+      <img src="View Participants.png" alt="View of all participants in the interface.">
+      <div class="text">View of all participants in the interface. This information appears when the "View Participants" button is clicked.</div>
+    </div>
+
+    <div class = "mySlides fade">
+      <img src="Individual Participant.png" alt="View of an individual participant's data in the interface.">
+      <div class="text">View of an individual participant's data in the interface. This information appears when a specific participant is selected from the participants page.</div>
+    </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1, 'act')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, 'act')">&#10095;</a>
+
+    </div>
+
+    <h3>Senior Thesis - Hamilton College Psychology Department (Clinton, NY)</h3>
+    <p>January 2025 - May 2025</p>
+    
+    <h3>Usability Research Assistant - Hamilton College Computer Science Department (Clinton, NY)</h3>
+    <p>January 2025 - May 2025</p>
+
+    <h3>Senior Project - Hamilton College Computer Science Department (Clinton, NY)</h3>
+    <p>August 2024 - December 2024</p>
+
+    <h3>Human Factors Research Assistant with National Science Research Experience for Undergraduates (NSF-REU) - Rice University (Houston, TX)</h3>
+    <p>June 2024-July 2024</p>
+
+    </div>
+
+    <br>
     <h2 id="personal" class="center-text">Personal Interests</h2>
 
     <!-- Code for slideshow of personal interest pictures -->
-    <div class="slideshow">
+    <div class="slideshow" data-slideshow="personal">
       <div class = "mySlides fade">
       <img src="pilotMountain.jpeg" alt="View from the top of Pilot Mountain, NC">
       <div class="text">View from the top of Pilot Mountain, NC</div>
@@ -102,8 +166,8 @@
     </div>
 
       <!-- Next and previous buttons -->
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <a class="prev" onclick="plusSlides(-1, 'personal')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, 'personal')">&#10095;</a>
 
     </div>
 
@@ -137,6 +201,6 @@
 </body>
 
 <footer>
-  <p>&copy; 2026 Jamie Duncan. All rights reserved. Last updated: October 2026</p>
+  <p>&copy; 2026 Jamie Duncan. All rights reserved. Last updated: November 2026</p>
 </footer>
 </html>

@@ -1,26 +1,35 @@
 // This is the JavaScript code for my personal website
 
-// JavaScript code for the personal interest slideshow
-let slideIndex = 1;
+// JavaScript code for the personal interest slideshows
+const slideshowIndexes = {};
 
-function plusSlides(step) {
-   showSlides(slideIndex += step);
+function plusSlides(step, slideshowName) {
+   slideshowIndexes[slideshowName] = (slideshowIndexes[slideshowName] || 1) + step;
+   showSlides(slideshowName);
 }
 
-function showSlides(index) {
-   const slides = document.getElementsByClassName('mySlides');
-   if (index > slides.length) slideIndex = 1;
-   if (index < 1) slideIndex = slides.length;
+function showSlides(slideshowName) {
+   const slideshow = document.querySelector(`[data-slideshow="${slideshowName}"]`);
+   const slides = slideshow ? slideshow.getElementsByClassName('mySlides') : [];
+   if (!slides.length) return;
+
+   const currentIndex = slideshowIndexes[slideshowName] || 1;
+   if (currentIndex > slides.length) slideshowIndexes[slideshowName] = 1;
+   if (currentIndex < 1) slideshowIndexes[slideshowName] = slides.length;
+
    for (const slide of slides) {
       slide.style.display = 'none';
    }
-   slides[slideIndex - 1].style.display = 'block';
+   slides[slideshowIndexes[slideshowName] - 1].style.display = 'block';
 }
 
 // A function that controls the light and dark mode feature
 //Creating a main event listener for the entire DOM once the content loads
 document.addEventListener('DOMContentLoaded', function() {
-   showSlides(slideIndex);
+   document.querySelectorAll('[data-slideshow]').forEach((slideshow) => {
+      slideshowIndexes[slideshow.dataset.slideshow] = 1;
+      showSlides(slideshow.dataset.slideshow);
+   });
 
    //The function runs when the content loads, which is itself another event listener, this time for when the object with id 'switch' is clicked
    document.getElementById('switch').addEventListener('click', function() {
