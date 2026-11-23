@@ -254,6 +254,7 @@ button {
   align-self: stretch;
   padding: 0 16px;
   font-size: 1.25em;
+  border-radius: 6px;
 }
 
 .light-theme #switch .fa-sun,
@@ -539,5 +540,21 @@ footer {
 
   .navbar.open li:has(> #switch) {
     display: none;
+  }
+
+  .light-theme .hamburger,
+  .light-theme #switch,
+  .light-theme .hamburger:hover,
+  .light-theme #switch:hover {
+    background-color: #85287C;
+    color: #FFFEF0;
+  }
+
+  .dark-theme .hamburger,
+  .dark-theme #switch,
+  .dark-theme .hamburger:hover,
+  .dark-theme #switch:hover {
+    background-color: #FFFEF0;
+    color: #85287C;
   }
 }
