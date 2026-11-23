@@ -31,6 +31,36 @@ document.addEventListener('DOMContentLoaded', function() {
       showSlides(slideshow.dataset.slideshow);
    });
 
+   // JavaScript code for the hamburger menu on phones and tablets
+   const hamburgerButton = document.getElementById('hamburger-btn');
+   const navbar = document.getElementById('navbar');
+   const compactNavigation = window.matchMedia('(max-width: 1024px)');
+
+   function closeNavigation() {
+      navbar.classList.remove('open');
+      hamburgerButton.setAttribute('aria-expanded', 'false');
+   }
+
+   function updateNavigation() {
+      if (!compactNavigation.matches) {
+         closeNavigation();
+      }
+   }
+
+   if (hamburgerButton && navbar) {
+      hamburgerButton.addEventListener('click', function() {
+         const isOpen = navbar.classList.toggle('open');
+         hamburgerButton.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      navbar.querySelectorAll('a[href^="#"]').forEach((link) => {
+         link.addEventListener('click', closeNavigation);
+      });
+
+      compactNavigation.addEventListener('change', updateNavigation);
+      updateNavigation();
+   }
+
    //The function runs when the content loads, which is itself another event listener, this time for when the object with id 'switch' is clicked
    document.getElementById('switch').addEventListener('click', function() {
     // Using the toggle method to toggle between the light and dark themes for the body.

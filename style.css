@@ -89,6 +89,11 @@
   object-fit: cover;
 }
 
+.experience-layout .align-right > .graduation-photo {
+  height: auto;
+  object-fit: unset;
+}
+
 .experience-layout .slideshow[data-slideshow="act"] img {
   height: clamp(180px, 30vw, 400px);
 }
@@ -471,4 +476,42 @@ footer {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+/* Changing the page layout for phones and tablets compared to desktop computers. */
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block;
+    margin: 0.5rem;
+    padding: 0.65rem 0.85rem;
+    border-radius: 6px;
+    font-size: 1.25rem;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .navbar.open {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .navbar.open li {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .navbar.open li:last-child {
+    margin-left: 0;
+  }
+
+  .navbar.open li:has(> #switch) {
+    min-height: 44px;
+  }
 }
