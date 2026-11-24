@@ -495,6 +495,10 @@ footer {
 @media (max-width: 1024px) {
   .hamburger {
     display: block;
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 1000;
     margin: 0.5rem;
     padding: 0.65rem 0.85rem;
     border-radius: 6px;
@@ -512,15 +516,22 @@ footer {
   }
 
   .navbar li:has(> #switch) {
-    position: absolute;
+    position: fixed;
     top: 0.5rem;
     right: 0.5rem;
-    z-index: 2;
+    z-index: 1000;
     display: flex;
     width: auto;
     min-height: 44px;
     padding: 0;
     border-radius: 6px;
+    transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.15s ease;
+  }
+
+  .navbar li:has(> #switch).mobile-switch-hidden {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-0.5rem);
   }
 
   .navbar.open {

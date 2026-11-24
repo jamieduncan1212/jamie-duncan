@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
    const hamburgerButton = document.getElementById('hamburger-btn');
    const navbar = document.getElementById('navbar');
    const compactNavigation = window.matchMedia('(max-width: 1024px)');
+   const themeSwitchContainer = navbar.querySelector('li:has(> #switch)');
 
    function closeNavigation() {
       navbar.classList.remove('open');
@@ -44,6 +45,15 @@ document.addEventListener('DOMContentLoaded', function() {
    function updateNavigation() {
       if (!compactNavigation.matches) {
          closeNavigation();
+      }
+   }
+
+   function updateThemeSwitchVisibility() {
+      if (themeSwitchContainer) {
+         themeSwitchContainer.classList.toggle(
+            'mobile-switch-hidden',
+            compactNavigation.matches && window.scrollY > 8
+         );
       }
    }
 
@@ -58,7 +68,10 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
       compactNavigation.addEventListener('change', updateNavigation);
+      compactNavigation.addEventListener('change', updateThemeSwitchVisibility);
+      window.addEventListener('scroll', updateThemeSwitchVisibility, { passive: true });
       updateNavigation();
+      updateThemeSwitchVisibility();
    }
 
    //The function runs when the content loads, which is itself another event listener, this time for when the object with id 'switch' is clicked
