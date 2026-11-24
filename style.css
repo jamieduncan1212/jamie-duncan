@@ -298,6 +298,42 @@ button {
   border: 5px solid #FFFEF0;
 }
 
+.footerImage {
+  display: block;
+  width: min(300px, 60vw);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-inline: auto;
+}
+
+.footer-layout {
+  align-items: center;
+}
+
+.footer-layout .left-column,
+.footer-layout .right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.light-theme .footerImage {
+  border: 5px solid #85287C;
+}
+
+.dark-theme .footerImage {
+  border: 5px solid #FFFEF0;
+}
+
+.light-theme .headshot {
+  border: 5px solid #85287C;
+}
+
+.dark-theme .headshot {
+  border: 5px solid #FFFEF0;
+}
+
 /* Styling for horizontal icon section */
 .horizontal-icons {
   display: flex;
