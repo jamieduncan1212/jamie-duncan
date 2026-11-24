@@ -110,6 +110,18 @@
   .footer-layout {
     grid-template-columns: 1fr;
   }
+
+  .footer-layout .left-column {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-layout .vertical-icons,
+  .footer-layout .vertical-icons li {
+    width: 100%;
+    margin-inline: 0;
+    text-align: left;
+  }
 }
 
 .pubList p {

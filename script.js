@@ -80,6 +80,17 @@ document.addEventListener('DOMContentLoaded', function() {
          link.addEventListener('click', closeNavigation);
       });
 
+      document.addEventListener('click', function(event) {
+         if (
+            compactNavigation.matches &&
+            navbar.classList.contains('open') &&
+            !navbar.contains(event.target) &&
+            !hamburgerButton.contains(event.target)
+         ) {
+            closeNavigation();
+         }
+      });
+
       compactNavigation.addEventListener('change', updateNavigation);
       compactNavigation.addEventListener('change', updateThemeSwitchVisibility);
       compactNavigation.addEventListener('change', updateHamburgerVisibility);
