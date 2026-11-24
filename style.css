@@ -106,6 +106,10 @@
   .experience-layout {
     grid-template-columns: 1fr;
   }
+
+  .footer-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
 .pubList p {
@@ -543,6 +547,13 @@ footer {
     padding: 0.65rem 0.85rem;
     border-radius: 6px;
     font-size: 1.25rem;
+    transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.15s ease;
+  }
+
+  .hamburger.mobile-hamburger-hidden {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-0.5rem);
   }
 
   .navbar {

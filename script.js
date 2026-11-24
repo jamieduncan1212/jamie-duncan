@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
    function closeNavigation() {
       navbar.classList.remove('open');
       hamburgerButton.setAttribute('aria-expanded', 'false');
+      hamburgerButton.classList.remove('mobile-hamburger-hidden');
    }
 
    function updateNavigation() {
@@ -57,10 +58,22 @@ document.addEventListener('DOMContentLoaded', function() {
       }
    }
 
+   function updateHamburgerVisibility() {
+      if (compactNavigation.matches) {
+         hamburgerButton.classList.toggle(
+            'mobile-hamburger-hidden',
+            window.scrollY > 8
+         );
+      } else {
+         hamburgerButton.classList.remove('mobile-hamburger-hidden');
+      }
+   }
+
    if (hamburgerButton && navbar) {
       hamburgerButton.addEventListener('click', function() {
          const isOpen = navbar.classList.toggle('open');
          hamburgerButton.setAttribute('aria-expanded', String(isOpen));
+         hamburgerButton.classList.toggle('mobile-hamburger-hidden', isOpen);
       });
 
       navbar.querySelectorAll('a[href^="#"]').forEach((link) => {
@@ -69,9 +82,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
       compactNavigation.addEventListener('change', updateNavigation);
       compactNavigation.addEventListener('change', updateThemeSwitchVisibility);
+      compactNavigation.addEventListener('change', updateHamburgerVisibility);
       window.addEventListener('scroll', updateThemeSwitchVisibility, { passive: true });
+      window.addEventListener('scroll', updateHamburgerVisibility, { passive: true });
       updateNavigation();
       updateThemeSwitchVisibility();
+      updateHamburgerVisibility();
    }
 
    //The function runs when the content loads, which is itself another event listener, this time for when the object with id 'switch' is clicked
